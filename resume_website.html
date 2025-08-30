@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Kumar Mishra - Professional Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience-item:last-child, .education-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .job-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+
+        .company {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            float: right;
+        }
+
+        .description {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .skill-item {
+            background: #f8f9fa;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px 5px 5px 0;
+            display: inline-block;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .project-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header fade-in">
+        <div class="profile-img">SKM</div>
+            <h1>Sanjay Kumar Mishra</h1>
+            <p class="title">Senior Manager - Accounts & Commercial | Finance Professional</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>imskmishra@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>+91 92895 48951</span>
+                </div>
+                <div class="contact-item">
+                    <span>🌐</span>
+                    <span>linkedin.com/in/imskmishra</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Delhi, India</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <section class="section full-width fade-in">
+                <h2>Professional Summary</h2>
+                <p>Experienced and dedicated finance and commercial professional with over 30 years of expertise in accounting, inventory control, exports, taxation, and regulatory compliance. Proven track record of streamlining financial operations, managing government audits, and optimizing stock and logistics processes. Skilled in using Busy software, Tally, ERP systems, Advanced Excel, Power BI, and AI-powered analytics in high-volume manufacturing environments.</p>
+            </section>
+
+            <section class="section fade-in">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <div class="job-title">Senior Manager - Accounts & Commercial | Chairman - Safety Committee</div>
+                    <div class="company">Aerol Formulations Pvt. Ltd., Bahadurgarh, Haryana</div>
+                    <div class="date">Dec 2008 - Present</div>
+                    <div class="description">
+                        Managed all accounting and financial operations including tax filings, reconciliations, and reporting. Led international export processes to Nepal, Iraq, Saudi Arabia, and Bangladesh. Coordinated with government departments for licenses, audits, and compliance documentation. Implemented robust stock monitoring systems using FIFO logic and digital tracking tools.
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="job-title">Manager - Excise & Audit</div>
+                    <div class="company">Multani Pharmaceuticals Ltd., Delhi</div>
+                    <div class="date">2007 - 2008</div>
+                    <div class="description">
+                        Handled excise compliance and audit management for pharmaceutical manufacturing operations.
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="job-title">Manager - Excise</div>
+                    <div class="company">Aero Club (Woodland Shoes), Sonepat</div>
+                    <div class="date">2000 - 2007</div>
+                    <div class="description">
+                        Managed excise operations and compliance for footwear manufacturing facility.
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="job-title">Excise Executive</div>
+                    <div class="company">Kapoor Sales Corporation, Delhi</div>
+                    <div class="date">1994 - 1995 & 1997 - 2000</div>
+                    <div class="description">
+                        Handled excise-related operations and regulatory compliance.
+                    </div>
+                </div>
+            </section>
+
+            <section class="section fade-in">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="job-title">PGDBM (Post Graduate Diploma in Business Management)</div>
+                    <div class="company">IGNOU, Delhi</div>
+                    <div class="date">Completed</div>
+                </div>
+                <div class="education-item">
+                    <div class="job-title">M.A. (Master of Arts)</div>
+                    <div class="company">Bihar University</div>
+                    <div class="date">Completed</div>
+                </div>
+                <div class="education-item">
+                    <div class="job-title">Bachelor's Degree</div>
+                    <div class="company">Bihar University</div>
+                    <div class="date">Completed</div>
+                </div>
+            </section>
+
+            <section class="section full-width fade-in">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Accounting & Finance</h3>
+                        <span class="skill-item">GST Filings</span>
+                        <span class="skill-item">Financial Reporting</span>
+                        <span class="skill-item">Bank Reconciliations</span>
+                        <span class="skill-item">Fund Management</span>
+                        <span class="skill-item">Cash Handling</span>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Software Proficiency</h3>
+                        <span class="skill-item">Busy (8+ years)</span>
+                        <span class="skill-item">Tally & Tally Prime</span>
+                        <span class="skill-item">Sahaj ERP</span>
+                        <span class="skill-item">Power BI</span>
+                        <span class="skill-item">Advanced Excel</span>
+                        <span class="skill-item">Google Sheets</span>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Inventory & Logistics</h3>
+                        <span class="skill-item">Stock Audits</span>
+                        <span class="skill-item">FIFO Analysis</span>
+                        <span class="skill-item">Export Logistics</span>
+                        <span class="skill-item">Factory Stuffing</span>
+                        <span class="skill-item">Negative Stock Analysis</span>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Regulatory Compliance</h3>
+                        <span class="skill-item">Government Licensing</span>
+                        <span class="skill-item">ISO 9001 & 45001</span>
+                        <span class="skill-item">POSH Compliance</span>
+                        <span class="skill-item">EPR & Hazardous Waste</span>
+                        <span class="skill-item">GST & CAG Audits</span>
+                        <span class="skill-item">Fire Safety</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section full-width fade-in">
+                <h2>Key Achievements</h2>
+                <div class="project-item">
+                    <div class="project-title">International Export Operations</div>
+                    <div class="description">
+                        Successfully managed export operations to 4 countries (Nepal, Iraq, Saudi Arabia, Bangladesh) with full regulatory adherence and compliance under LUT.
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">Technology-Driven Stock Management</div>
+                    <div class="description">
+                        Reduced stock discrepancies by implementing robust FIFO-based aging systems and digital tracking tools for inventory management.
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">Financial Process Enhancement</div>
+                    <div class="description">
+                        Enhanced reconciliation accuracy through implementation of digital financial tools and streamlined accounting processes across multiple ERP systems.
+                    </div>
+                </div>
+            </section>
+
+            <section class="section full-width fade-in">
+                <h2>Certifications in Process</h2>
+                <div class="project-item">
+                    <div class="project-title">Advanced Analytics & Business Intelligence</div>
+                    <div class="description">
+                        Advanced Excel, Power BI, Google Sheets - BizWiz (Online) | ChatGPT & AI Analytics - Online Course
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">Auditing & Compliance</div>
+                    <div class="description">
+                        Internal Auditor - Udemy | OSHAS Compliance - Udemy | AI Generalist - Completed 18 hrs online course from Outskill
+                    </div>
+                </div>
+        </div>
+
+        <footer style="text-align: center; margin-top: 40px; padding: 20px;">
+            <a href="#" class="btn">Download PDF Resume</a>
+            <a href="#" class="btn" style="margin-left: 15px;">Contact Me</a>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Add hover effects for skill items
+        document.querySelectorAll('.skill-item').forEach(skill => {
+            skill.addEventListener('mouseenter', () => {
+                skill.style.transform = 'scale(1.05) rotate(2deg)';
+            });
+            
+            skill.addEventListener('mouseleave', () => {
+                skill.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+
+        // Smooth scrolling for any internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
